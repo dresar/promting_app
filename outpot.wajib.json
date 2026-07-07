@@ -1,0 +1,8 @@
+{
+  "status": "SUCCESS",
+  "message": "Backend controllers (digitalProductController.ts, adController.ts, logoController.ts, bannerController.ts) have been successfully updated to return this unified format directly in the database and API responses.",
+  "format_info": {
+    "1_json_full_carousel": "Top-level object contains global style variables (gaya_visual_global, aturan_global, layout_media_sosial_global).",
+    "json_pisah_pisah_tiap_slide": "daftar_slide array contains the detailed standalone prompts for each individual slide (slideNumber, role, deskripsi_visual, teks_dalam_gambar, media_sosial_aturan, etc.)"
+  }
+}
