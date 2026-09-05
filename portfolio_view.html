@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Project View - PromptStudio AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --card-border: rgba(148, 163, 184, 0.15);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+    }
+
+    [data-theme="light"] {
+      --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --card-border: rgba(203, 213, 225, 0.8);
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      min-height: 100vh;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .controls {
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .theme-toggle-btn {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #38bdf8;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      backdrop-filter: blur(10px);
+    }
+
+    .theme-toggle-btn:hover {
+      background: rgba(56, 189, 248, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .portfolio-card-container {
+      width: 100%;
+      max-width: 820px;
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+
+    /* Target Portfolio Content styles inheriting colors */
+    .portfolio-content {
+      color: inherit;
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <div class="controls">
+    <button class="theme-toggle-btn" onclick="toggleTheme()" id="themeBtn">
+      🌙 Mode Gelap (Klik untuk Mode Terang)
+    </button>
+  </div>
+
+  <div class="portfolio-card-container">
+    <!-- KODE PORTFOLIO HTML -->
+    <div class="portfolio-content">
+      <h2 style="color: #38bdf8; margin-top: 0; margin-bottom: 8px; font-size: 24px; font-weight: 700; display: flex; align-items: center; gap: 8px;">
+        🚀 PromptStudio AI — Full-Stack AI Prompt Engineering Platform
+      </h2>
+      
+      <p style="margin-top: 0; margin-bottom: 16px; font-size: 15px; opacity: 0.9;">
+        <strong>PromptStudio AI</strong> adalah platform cerdas cross-platform yang dirancang untuk mempermudah generasi prompa (prompt) AI terstruktur secara otomatis bagi kreator konten, marketer, dan pengembang. Terintegrasi langsung dengan model LLM canggih Groq Cloud (Llama 3.3 70B & Llama 3.2 11B Vision) serta dilengkapi sistem rotasi API Key otomatis, platform ini menghadirkan pengalaman pembuatan konten iklan viral, carousel edukasi, deskripsi produk digital, hingga pembuatan prompt logo secara efisien dan andal.
+      </p>
+
+      <hr style="border: none; border-top: 1px solid rgba(148, 163, 184, 0.2); margin: 16px 0;" />
+
+      <h3 style="color: #818cf8; margin-top: 0; margin-bottom: 12px; font-size: 18px; font-weight: 600;">
+        📌 Tanggung Jawab & Fitur Utama Project:
+      </h3>
+      <ul style="margin-top: 0; margin-bottom: 16px; padding-left: 20px; font-size: 14.5px;">
+        <li style="margin-bottom: 8px;"><strong>Arsitektur Client-Server & Offline Cache:</strong> Membangun aplikasi mobile Flutter dengan state management <em>Provider</em> serta lokal database cache (SQLite/Sqflite) untuk performa responsif dan dukungan offline.</li>
+        <li style="margin-bottom: 8px;"><strong>API Gateway & Key Rotation System:</strong> Mengembangkan backend gateway berbasis Node.js, Express, dan TypeScript yang menyajikan sistem rotasi otomatis Groq API Key guna menjamin keandalan sistem tanpa downtime.</li>
+        <li style="margin-bottom: 8px;"><strong>Web Admin Panel Dashboard:</strong> Merancang antarmuka Web Admin intuitif untuk pengelolaan CRUD gaya desain visual, kategori audiens target, katalog template, dan konfigurasi profil AI.</li>
+        <li style="margin-bottom: 8px;"><strong>Integrasi Multi-Cloud Services:</strong> Menghubungkan basis data transaksional MySQL, cloud storage ImageKit untuk manajemen aset gambar, dan RESTful API Groq AI Cloud.</li>
+      </ul>
+
+      <hr style="border: none; border-top: 1px solid rgba(148, 163, 184, 0.2); margin: 16px 0;" />
+
+      <h3 style="color: #38bdf8; margin-top: 0; margin-bottom: 12px; font-size: 18px; font-weight: 600;">
+        🛠️ Teknologi & Stack Digunakan:
+      </h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px;">
+        <span style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; padding: 4px 12px; border-radius: 6px; font-size: 12.5px; font-weight: 600;">Flutter</span>
+        <span style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; padding: 4px 12px; border-radius: 6px; font-size: 12.5px; font-weight: 600;">Dart</span>
+        <span style="background: rgba(168, 85, 247, 0.15); color: #c084fc; padding: 4px 12px; border-radius: 6px; font-size: 12.5px; font-weight: 600;">Node.js</span>
+        <span style="background: rgba(168, 85, 247, 0.15); color: #c084fc; padding: 4px 12px; border-radius: 6px; font-size: 12.5px; font-weight: 600;">Express.js</span>
+        <span style="background: rgba(168, 85, 247, 0.15); color: #c084fc; padding: 4px 12px; border-radius: 6px; font-size: 12.5px; font-weight: 600;">TypeScript</span>
+        <span style="background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 4px 12px; border-radius: 6px; font-size: 12.5px; font-weight: 600;">Groq Cloud LLM</span>
+        <span style="background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 4px 12px; border-radius: 6px; font-size: 12.5px; font-weight: 600;">Llama 3.3 70B</span>
+        <span style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; padding: 4px 12px; border-radius: 6px; font-size: 12.5px; font-weight: 600;">MySQL</span>
+        <span style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; padding: 4px 12px; border-radius: 6px; font-size: 12.5px; font-weight: 600;">SQLite / Sqflite</span>
+        <span style="background: rgba(14, 165, 233, 0.15); color: #38bdf8; padding: 4px 12px; border-radius: 6px; font-size: 12.5px; font-weight: 600;">ImageKit Cloud</span>
+        <span style="background: rgba(236, 72, 153, 0.15); color: #f472b6; padding: 4px 12px; border-radius: 6px; font-size: 12.5px; font-weight: 600;">RESTful API</span>
+      </div>
+
+      <div style="background: rgba(14, 165, 233, 0.12); border-left: 4px solid #0284c7; padding: 14px 16px; border-radius: 8px;">
+        <strong style="color: #38bdf8; font-size: 15px; display: block; margin-bottom: 4px;">💡 Highlight Kompetensi & Nilai Tambah:</strong>
+        <span style="font-size: 14px; opacity: 0.95;">
+          Demonstrasi keahlian merancang arsitektur aplikasi end-to-end (Mobile Client & Backend Gateway), integrasi AI LLM tingkat lanjut dengan ketahanan sistem tinggi (Automatic API Key Failover), serta penerapan caching hybrid offline-first untuk UX yang optimal.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const btn = document.getElementById('themeBtn');
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.setAttribute('data-theme', 'light');
+        btn.innerHTML = '☀️ Mode Terang (Klik untuk Mode Gelap)';
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        btn.innerHTML = '🌙 Mode Gelap (Klik untuk Mode Terang)';
+      }
+    }
+  </script>
+</body>
+</html>
